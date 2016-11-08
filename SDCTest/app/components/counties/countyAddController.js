@@ -19,7 +19,7 @@
 
         $scope.provinces = [];
         function loadProvince() {
-            apiService.get('api/province/getallparents', null, function (result) {
+            apiService.get('api/province/getall', null, function (result) {
                 $scope.provinces = result.data;
             }, function () {
                 console.log('Cannot get list parent');

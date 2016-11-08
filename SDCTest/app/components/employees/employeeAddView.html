@@ -33,16 +33,19 @@
 
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Ngày Sinh</label>
-                    <div class="col-sm-10">
-                        <input date-time min-date="minDate" type="text" class="form-control" name="birthday" required ng-model="employee.BirthDay">
-                        <span ng-show="frmAddEmployee.birthday.$invalid" class="has-error">Phải nhập ngày sinh</span>
-                       
+                    <div class="col-sm-3">
+                        <datepicker date-format="dd-MM-yyyy" selector="form-control" >
+                            <input type="text" class="form-control" name="birthday" required ng-model="employee.BirthDay" placeholder="Chọn ngày..."/>
+                            <span class="input-group-addon" style="cursor: pointer">
+                                <i class="fa fa-lg fa-calendar"></i>
+                            </span>
+                        </datepicker>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Chức vụ</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="position" ng-maxlength="500" ng-model="employee.Position">
+                        <input type="text" class="form-control" name="position" ng-maxlength="500" ng-model="employee.Position" >
                         <span ng-show="frmAddEmployee.position.$error.maxlength" class="has-error">Mô tả chỉ được 500 ký tự</span>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
 ﻿/// <reference path="/Assets/admin/libs/angular/angular.js" />
 (function () {
-    angular.module('SDCTest.common', ['ui.router', 'ngBootbox', 'ngCkeditor']);
+    angular.module('SDCTest.common', ['ui.router', 'ngBootbox', 'ngCkeditor', '720kb.datepicker']);
 })();
