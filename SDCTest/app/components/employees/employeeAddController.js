@@ -5,10 +5,6 @@
 
     function employeeAddController(apiService, $scope, notificationService, $state, commonService, $http) {
 
-        $scope.employee = {
-            BirthDay: new Date(),
-        }
-
         $scope.ckeditorOptions = {
             language: 'vi',
             height: '200px'
@@ -19,7 +15,6 @@
             finder.selectActionFunction = function (fileurl) {
                 $scope.employee.Image = fileurl;
             }
-
             finder.popup();
         }
 
@@ -47,6 +42,7 @@
 
         $scope.counties = [];
         $scope.loadCounty = loadCounty;
+
         function loadCounty(id) {
             $http.get("api/county/getbyid/" + id).then(function (res) {
                 $scope.counties = res.data;

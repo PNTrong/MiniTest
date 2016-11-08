@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Model.Models;
 using SDCTest.Common.Core;
+using SDCTest.Common.Extension;
 using SDCTest.Models;
 using Service;
 using System;
@@ -24,6 +25,7 @@ namespace SDCTest.Api
 
         [Route("getall")]
         [HttpGet]
+        [AllowAnonymous]
         public HttpResponseMessage GetAll(HttpRequestMessage request)
         {
             return CreateHttpResponse(request, () =>
@@ -40,6 +42,8 @@ namespace SDCTest.Api
 
         [Route("getbyid/{id:int}")]
         [HttpGet]
+        [AllowAnonymous]
+
         public HttpResponseMessage GetListbyProvinceId(HttpRequestMessage request, int id)
         {
             return CreateHttpResponse(request, () =>
@@ -51,6 +55,29 @@ namespace SDCTest.Api
                 var response = request.CreateResponse(HttpStatusCode.OK, responseData);
 
                 return response;
+            });
+        }
+
+
+        [Route("create")]
+        [HttpPost]
+        [AllowAnonymous]
+        public HttpResponseMessage Create(HttpRequestMessage req, CountyViewModel countyVm)
+        {
+            return CreateHttpResponse(req, () => {
+                HttpResponseMessage res = null;
+                if (ModelState.IsValid)
+                {
+                    var county = new County();
+                    county.UpdateCounty(countyVm);
+
+                    _countyService.Add(county);
+                    _countyService.SaveChanges();
+
+                    var resData = Mapper.Map<County, CountyViewModel>(county);
+                    res = req.CreateResponse(HttpStatusCode.OK, resData);
+                }
+                return res;
             });
         }
 

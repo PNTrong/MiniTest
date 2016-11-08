@@ -227,8 +227,12 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a ui-sref="employees"><i class="fa fa-circle-o"></i>Employees</a></li>
-                            <li><a ui-sref="add_employee"><i class="fa fa-circle-o"></i>Add Employees</a></li>
+                            <li><a ui-sref="employees"><i class="fa fa-circle-o"></i>Danh sách Nhân viên</a></li>
+                            <li><a ui-sref="add_employee"><i class="fa fa-circle-o"></i>Thêm nhân viên</a></li>
+                            <li><a ui-sref="provinces"><i class="fa fa-circle-o"></i>Danh sách Tỉnh/Thành</a></li>
+                            <li><a ui-sref="add_province"><i class="fa fa-circle-o"></i>Thêm Tỉnh</a></li>
+                            <li><a ui-sref="counties"><i class="fa fa-circle-o"></i>Danh sách Quận/Huyện</a></li>
+                            <li><a ui-sref="add_county"><i class="fa fa-circle-o"></i>Thêm Quận/Huyện</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
@@ -240,10 +244,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a ui-sref="product_categories"><i class="fa fa-circle-o"></i> List View</a></li>
-                            <li><a ui-sref="product_categories_add"><i class="fa fa-circle-o"></i> Add Product Category</a></li>
-                            <li><a ui-sref="#"><i class="fa fa-circle-o"></i> Edit Product Category</a></li>
-                            <li><a href="../layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+                           
                         </ul>
                     </li>
                     <li>
@@ -626,6 +627,7 @@
     <script src="~/Assets/admin/libs/ng-ckeditor/ng-ckeditor.js"></script>
     <script src="~/Assets/admin/libs/bootbox/bootbox.js"></script>
     <script src="~/Assets/admin/libs/ngBootbox/ngBootbox.js"></script>
+    <script src="~/Assets/admin/libs/angular-datepicker/dist/angular-datepicker.js"></script>
 
     <script src="~/app/shared/modules/SDCTest.common.js"></script>
     <script src="~/app/shared/directives/pagerDirective.js"></script>
@@ -635,11 +637,17 @@
     <script src="~/app/shared/services/commonService.js"></script>
 
     <script src="~/app/components/employees/employee.module.js"></script>
+    <script src="~/app/components/provinces/province.module.js"></script>
+    <script src="~/app/components/counties/county.module.js"></script>
+
 
 
     <script src="~/app/app.js"></script>
     <script src="~/app/components/employees/employeeListController.js"></script>
     <script src="~/app/components/home/homeController.js"></script>
     <script src="~/app/components/employees/employeeAddController.js"></script>
+    <script src="~/app/components/provinces/provinceAddController.js"></script>
+    <script src="~/app/components/employees/employeeEditController.js"></script>
+    <script src="~/app/components/counties/countyAddController.js"></script>
 </body>
 </html>

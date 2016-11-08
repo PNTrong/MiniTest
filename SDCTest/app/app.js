@@ -1,6 +1,6 @@
 ﻿/// <reference path="/Assets/admin/libs/angular/angular.js" />
 (function () {
-    angular.module('SDCTest',['SDCTest.employees', 'SDCTest.common']).config(config);
+    angular.module('SDCTest',['SDCTest.employees','SDCTest.common','SDCTest.provinces','SDCTest.counties']).config(config);
 
     config.$inject = ['$stateProvider', '$urlRouterProvider'];
 

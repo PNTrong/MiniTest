@@ -56,7 +56,6 @@ namespace Service
         public IEnumerable<Employee> GetAll(int provinceId)
         {
             return _EmployeeRepository.GetMulti(x => x.ProvinceId == provinceId);
-
         }
 
         public IEnumerable<Employee> GetAll(string keyword)

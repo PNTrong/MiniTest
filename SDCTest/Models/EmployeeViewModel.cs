@@ -23,5 +23,7 @@ namespace SDCTest.Models
         public string Introduce { set; get; }
 
         public virtual CountyViewModel County { set; get; }
+
+        public virtual ProvinceViewModel Province { set; get; }
     }
 }

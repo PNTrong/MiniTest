@@ -40,6 +40,24 @@
             }
         }, true);
 
+        $scope.delEmployee = delEmployee;
+
+        function delEmployee(id) {
+            $ngBootbox.confirm('Bạn có chắc muốn xóa?').then(function () {
+                var config = {
+                    params: {
+                        id: id
+                    }
+                }
+                apiService.del('api/employee/delete', config, function () {
+                    notificationService.Success('Xóa thành công');
+                    search();
+                }, function () {
+                    notificationService.Error('Xóa không thành công');
+                })
+            });
+        }
+
         $scope.deleteMultiple = deleteMultiple;
         function deleteMultiple() {
             var IDs = [];

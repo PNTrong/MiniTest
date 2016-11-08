@@ -1,16 +1,9 @@
 ﻿using Data.Repositories;
 using Model.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Training.Data.Infrastructure;
 
 namespace Service
 {
-
-
     public interface IErrorService
     {
         Error Create(Error err);
