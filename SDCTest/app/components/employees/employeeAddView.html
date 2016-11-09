@@ -45,7 +45,7 @@
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Chức vụ</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="position" ng-maxlength="500" ng-model="employee.Position" >
+                        <input type="text" class="form-control" required name="position" ng-maxlength="500" ng-model="employee.Position" >
                         <span ng-show="frmAddEmployee.position.$error.maxlength" class="has-error">Mô tả chỉ được 500 ký tự</span>
                         <span ng-show="frmAddEmployee.position.$invalid" class="has-error">Phải nhập chức vụ</span>                    
                     </div>
@@ -53,17 +53,18 @@
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Nơi ở:</label>
                     <div class="col-sm-10">
-                        <select name="province" class="form-control" data-ng-model="employee.ProvinceId" selected="employee.ProvinceId" data-ng-options="c.ProvinceId as c.Name for c in provinces" data-ng-change="loadCounty(employee.ProvinceId)">
+                        <select required name="province" class="form-control" data-ng-model="employee.ProvinceId" selected="employee.ProvinceId" data-ng-options="c.ProvinceId as c.Name for c in provinces" data-ng-change="loadCounty(employee.ProvinceId)">
                             <option value="">-- Chọn Tỉnh --</option>
                         </select>
-                        <span ng-show="frmAddEmployee.province.$error.required">Chọn Tỉnh/Thành </span>
+                        <span ng-show="frmAddEmployee.province.$error.required" class="has-error">Phải chọn Tỉnh/Thành</span>
                     </div>
                     <br />
                     <label for="inputEmail3" class="col-sm-2 control-label"></label>
                     <div class="col-sm-10">
-                    <select class="form-control" ng-model="employee.CountyId" data-ng-options="s.CountyId as s.Name for s in counties">
+                    <select required class="form-control" ng-model="employee.CountyId" data-ng-options="s.CountyId as s.Name for s in counties">
                         <option value="">-- Chọn Huyện/Phường --</option>
                     </select>
+                        <span ng-show="frmAddEmployee.province.$error.required" class="has-error">Phải chọn Quận/Huyện</span>
                         </div>
                 </div>
                

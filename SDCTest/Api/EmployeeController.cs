@@ -90,6 +90,7 @@ namespace SDCTest.Api
         {
             return CreateHttpResponse(req, () =>
             {
+              
                 HttpResponseMessage res = null;
                 if (ModelState.IsValid)
                 {
@@ -104,6 +105,7 @@ namespace SDCTest.Api
                 }
                 else
                 {
+                    var errors = ModelState.Values.SelectMany(v => v.Errors);
                     req.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
                 }
                 return res;
