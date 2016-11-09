@@ -13,7 +13,9 @@
         $scope.ChooseImage = function () {
             var finder = new CKFinder();
             finder.selectActionFunction = function (fileurl) {
-                $scope.employee.Image = fileurl;
+                $scope.$apply(function () {
+                    $scope.employee.Avartar = fileurl;
+                })
             }
             finder.popup();
         }
