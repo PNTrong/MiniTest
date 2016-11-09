@@ -25,8 +25,8 @@
                     <label for="inputEmail3" class="col-sm-2 control-label">Tên nhân viên</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" ng-maxlength="256" required name="name" ng-model="employee.Name">
-                        <span ng-show="frmAddEmployee.name.$invalid" class="has-error">Phải nhập tên danh mục</span>
-                        <span ng-show="frmAddEmployee.name.$error.maxlength" class="has-error">Tên danh mục chỉ được 256 ký tự</span>
+                        <span ng-show="frmAddEmployee.name.$invalid" class="has-error">Phải nhập tên nhân viên</span>
+                        <span ng-show="frmAddEmployee.name.$error.maxlength" class="has-error">Tên nhân viên chỉ được 256 ký tự</span>
 
                     </div>
                 </div>
@@ -47,6 +47,7 @@
                     <div class="col-sm-10">
                         <input type="text" class="form-control" name="position" ng-maxlength="500" ng-model="employee.Position" >
                         <span ng-show="frmAddEmployee.position.$error.maxlength" class="has-error">Mô tả chỉ được 500 ký tự</span>
+                        <span ng-show="frmAddEmployee.position.$invalid" class="has-error">Phải nhập chức vụ</span>                    
                     </div>
                 </div>
                 <div class="form-group">

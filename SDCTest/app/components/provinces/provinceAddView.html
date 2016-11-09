@@ -7,8 +7,7 @@
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
         <li><a href="#">Nhân Viên</a></li>
-        <li><a ui-sref="provinces">Danh sách</a></li>
-        <li class="active">Thêm mới</li>
+        <li class="active">Danh sách</li>
     </ol>
 </section>
 <!-- Main content -->
@@ -25,9 +24,8 @@
                     <label for="inputEmail3" class="col-sm-2 control-label">Tên Tỉnh/Thành</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" ng-maxlength="256" required name="name" ng-model="province.Name">
-                        <span ng-show="frmAddProvince.name.$invalid" class="has-error">Phải nhập tên danh mục</span>
-                        <span ng-show="frmAddProvince.name.$error.maxlength" class="has-error">Tên danh mục chỉ được 256 ký tự</span>
-
+                        <span ng-show="frmAddProvince.name.$invalid" class="has-error">Phải nhập tên Tỉnh/Thành</span>
+                        <span ng-show="frmAddProvince.name.$error.maxlength" class="has-error">Tên Tỉnh/Thành chỉ được 256 ký tự</span>
                     </div>
                 </div>
             </div><!-- /.box-body -->

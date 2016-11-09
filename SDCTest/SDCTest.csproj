@@ -206,6 +206,8 @@
     <Content Include="app\components\counties\county.module.js" />
     <Content Include="app\components\counties\countyAddController.js" />
     <Content Include="app\components\counties\CountyAddView.html" />
+    <Content Include="app\components\counties\countyListController.js" />
+    <Content Include="app\components\counties\countyListView.html" />
     <Content Include="app\components\employees\employee.module.js" />
     <Content Include="app\components\employees\employeeAddController.js" />
     <Content Include="app\components\employees\employeeAddView.html" />
